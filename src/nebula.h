@@ -1,0 +1,80 @@
+#pragma once
+
+// ─────────────────────────────────────────────
+//  NEBULA HUB — Global Constants
+// ─────────────────────────────────────────────
+
+#define APP_TITLE        "NEBULA HUB"
+#define APP_VERSION      "1.0.0"
+#define TITLE_ID         "NEBU00001"
+
+#define SCREEN_W         1920
+#define SCREEN_H         1080
+
+// Remote manifest — hosted on GitHub Pages (update this URL after deploy)
+#define MANIFEST_URL     "https://YamatoXSF.github.io/nebulahub-cdn/manifest.json"
+#define CDN_BASE         "https://YamatoXSF.github.io/nebulahub-cdn"
+
+// Local paths (all writable on GoldHEN)
+#define DATA_DIR         "/data/NEBULAHUB/"
+#define DOWNLOAD_DIR     "/data/NEBULAHUB/downloads/"
+#define CACHE_DIR        "/data/NEBULAHUB/cache/"
+#define AVATAR_DEST      "/data/AVATARS/"
+#define PKG_INSTALL_DIR  "/data/pkg/"
+
+// UI palette  (0xRRGGBBAA)
+#define COL_BG           0x0A0A14FF   // deep navy
+#define COL_PANEL        0x12121EFF   // panel
+#define COL_PANEL_ALT    0x1A1A2EFF   // lighter panel
+#define COL_ACCENT       0x7B2FFF FF  // nebula purple
+#define COL_ACCENT2      0xFF5DB1FF   // pink
+#define COL_TEXT         0xEEEEEEFF
+#define COL_SUBTEXT      0x888899FF
+#define COL_HIGHLIGHT    0xFFFFFFFF
+#define COL_PROGRESS     0x7B2FFFFF
+#define COL_ERROR        0xFF3B3BFF
+#define COL_SUCCESS      0x2BFFB1FF
+
+// Fonts (embedded in PKG sce_sys)
+#define FONT_REGULAR     "eambedded://assets/fonts/NotoSans-Regular.ttf"
+#define FONT_BOLD        "embedded://assets/fonts/NotoSans-Bold.ttf"
+
+// Content types
+enum class ContentType { Avatar, Theme };
+enum class ThemeKind   { Static, Dynamic };
+enum class InstallState {
+    None, Queued, Downloading, Installing, Done, Error
+};
+
+// DualShock 4 button masks
+#define PAD_BUTTON_CROSS    0x0004
+#define PAD_BUTTON_CIRCLE   0x0002
+#define PAD_BUTTON_SQUARE   0x0080
+#define PAD_BUTTON_TRIANGLE 0x0010
+#define PAD_BUTTON_L1       0x0400
+#define PAD_BUTTON_R1       0x0800
+#define PAD_BUTTON_L2       0x0100
+#define PAD_BUTTON_R2       0x0200
+#define PAD_BUTTON_UP       0x0010
+#define PAD_BUTTON_DOWN     0x0040
+#define PAD_BUTTON_LEFT     0x0020
+#define PAD_BUTTON_RIGHT    0x0080
+#define PAD_BUTTON_OPTIONS  0x0008
+#define PAD_BUTTON_DPAD_UP    0x0010
+#define PAD_BUTTON_DPAD_DOWN  0x0040
+#define PAD_BUTTON_DPAD_LEFT  0x0020
+#define PAD_BUTTON_DPAD_RIGHT 0x0080
+
+// Screen IDs
+enum class ScreenID {
+    Home,
+    AvatarLibrary,
+    ThemeLibrary,
+    AnimatedThemes,
+    Search,
+    ItemPreview,
+    Downloads,
+    Installed,
+    Favorites,
+    Settings
+};
